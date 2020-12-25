@@ -68,7 +68,7 @@ public class RecommendController extends AbstractController {
      */
     @PostMapping("/save")
     @RequiresPermissions("operation:recommend:save")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result save(@RequestBody Recommend recommend){
         ValidatorUtils.validateEntity(recommend);
         recommendService.save(recommend);
@@ -81,7 +81,7 @@ public class RecommendController extends AbstractController {
      */
     @PutMapping("/update")
     @RequiresPermissions("operation:recommend:update")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result update(@RequestBody Recommend recommend){
         ValidatorUtils.validateEntity(recommend);
         recommendService.updateById(recommend);
@@ -90,7 +90,7 @@ public class RecommendController extends AbstractController {
 
     @PutMapping("/top/{id}")
     @RequiresPermissions("operation:recommend:update")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result updateTop (@PathVariable Integer id) {
         recommendService.updateTop(id);
         return Result.ok();
@@ -101,7 +101,7 @@ public class RecommendController extends AbstractController {
      */
     @DeleteMapping("/delete")
     @RequiresPermissions("operation:recommend:delete")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result delete(@RequestBody String[] ids){
         recommendService.removeByIds(Arrays.asList(ids));
 

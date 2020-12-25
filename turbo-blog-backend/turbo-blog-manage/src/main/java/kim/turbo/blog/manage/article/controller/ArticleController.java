@@ -58,7 +58,7 @@ public class ArticleController extends AbstractController {
 
     @PostMapping("/save")
     @RequiresPermissions("article:save")
-    @CacheEvict(allEntries = true,cacheNames = "saveArticle")
+    //    @CacheEvict(allEntries = true)(allEntries = true,cacheNames = "saveArticle")
     @RefreshEsMqSender(sender = "dbblog-manage-saveArticle")
     public Result saveArticle(@RequestBody ArticleDTO article) {
         ValidatorUtils.validateEntity(article);
@@ -68,7 +68,7 @@ public class ArticleController extends AbstractController {
 
     @PutMapping("/update")
     @RequiresPermissions("article:update")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     @RefreshEsMqSender(sender = "dbblog-manage-updateArticle")
     public Result updateArticle(@RequestBody ArticleDTO article) {
         ValidatorUtils.validateEntity(article);
@@ -78,7 +78,7 @@ public class ArticleController extends AbstractController {
 
     @PutMapping("/update/status")
     @RequiresPermissions("article:update")
-    @CacheEvict(allEntries = true, cacheNames = "updateStatus")
+    //    @CacheEvict(allEntries = true)(allEntries = true, cacheNames = "updateStatus")
     @RefreshEsMqSender(sender = "dbblog-manage-updateStatus")
     public Result updateStatus(@RequestBody Article article) {
 
@@ -90,7 +90,7 @@ public class ArticleController extends AbstractController {
     @DeleteMapping("/delete")
     @RequiresPermissions("article:delete")
     @Transactional(rollbackFor = Exception.class)
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     @RefreshEsMqSender(sender = "dbblog-manage-deleteArticle")
     public Result deleteBatch(@RequestBody Integer[] articleIds) {
         recommendService.deleteBatchByLinkId(articleIds, ModuleEnum.ARTICLE.getValue());

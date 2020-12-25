@@ -56,7 +56,7 @@ public class BookNoteController extends AbstractController {
 
     @PostMapping("/save")
     @RequiresPermissions("book:note:save")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result saveBookNote(@RequestBody BookNoteDTO bookNote){
         ValidatorUtils.validateEntity(bookNote);
         bookNoteService.saveBookNote(bookNote);
@@ -65,7 +65,7 @@ public class BookNoteController extends AbstractController {
 
     @PutMapping("/update")
     @RequiresPermissions("book:note:update")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result updateBookNote(@RequestBody BookNoteDTO bookNote){
         ValidatorUtils.validateEntity(bookNote);
         bookNoteService.updateBookNote(bookNote);
@@ -74,7 +74,7 @@ public class BookNoteController extends AbstractController {
 
     @PutMapping("/update/status")
     @RequiresPermissions("book:note:update")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result updateStatus(@RequestBody BookNote bookNote) {
         bookNoteService.updateById(bookNote);
         return Result.ok();
@@ -84,7 +84,7 @@ public class BookNoteController extends AbstractController {
     @DeleteMapping("/delete")
     @RequiresPermissions("book:note:delete")
     @Transactional(rollbackFor = Exception.class)
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result deleteBatch(@RequestBody Integer[] bookNoteIds){
         recommendService.deleteBatchByLinkId(bookNoteIds, ModuleEnum.BOOK_NOTE.getValue());
         bookNoteService.deleteBatch(bookNoteIds);

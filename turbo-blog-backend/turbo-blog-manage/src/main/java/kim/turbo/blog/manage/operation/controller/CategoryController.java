@@ -89,7 +89,7 @@ public class CategoryController extends AbstractController {
      */
     @RequestMapping("/save")
     @RequiresPermissions("operation:category:save")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result save(@RequestBody Category category){
         // 数据校验
         ValidatorUtils.validateEntity(category);
@@ -139,7 +139,7 @@ public class CategoryController extends AbstractController {
      */
     @RequestMapping("/update")
     @RequiresPermissions("operation:category:update")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result update(@RequestBody Category category){
         categoryService.updateById(category);
 
@@ -151,7 +151,7 @@ public class CategoryController extends AbstractController {
      */
     @DeleteMapping("/delete/{id}")
     @RequiresPermissions("operation:category:delete")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result delete(@PathVariable Integer id){
 
         //判断是否有子菜单或按钮

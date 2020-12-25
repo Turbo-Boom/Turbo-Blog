@@ -60,7 +60,7 @@ public class LinkController extends AbstractController {
      */
     @PostMapping("/save")
     @RequiresPermissions("operation:link:save")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result save(@RequestBody Link link){
         ValidatorUtils.validateEntity(link);
         linkService.save(link);
@@ -73,7 +73,7 @@ public class LinkController extends AbstractController {
      */
     @PutMapping("/update")
     @RequiresPermissions("operation:link:update")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result update(@RequestBody Link link){
         ValidatorUtils.validateEntity(link);
         linkService.updateById(link);
@@ -85,7 +85,7 @@ public class LinkController extends AbstractController {
      */
     @DeleteMapping("/delete")
     @RequiresPermissions("operation:link:delete")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result delete(@RequestBody String[] ids){
         linkService.removeByIds(Arrays.asList(ids));
 

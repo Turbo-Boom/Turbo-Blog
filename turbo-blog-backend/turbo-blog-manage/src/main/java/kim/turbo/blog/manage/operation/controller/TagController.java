@@ -74,7 +74,7 @@ public class TagController extends AbstractController {
      */
     @PostMapping("/save")
     @RequiresPermissions("operation:tag:save")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result save(@RequestBody Tag tag){
         ValidatorUtils.validateEntity(tag);
         tagService.save(tag);
@@ -87,7 +87,7 @@ public class TagController extends AbstractController {
      */
     @PutMapping("/update")
     @RequiresPermissions("operation:tag:update")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result update(@RequestBody Tag tag){
         ValidatorUtils.validateEntity(tag);
         tagService.updateById(tag);
@@ -99,7 +99,7 @@ public class TagController extends AbstractController {
      */
     @DeleteMapping("/delete")
     @RequiresPermissions("operation:tag:delete")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result delete(@RequestBody String[] ids){
         for (String id : ids) {
             List<TagLink> tagLinkList = tagLinkMapper.selectList(new QueryWrapper<TagLink>().lambda().eq(TagLink::getTagId, id));

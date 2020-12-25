@@ -66,7 +66,7 @@ public class BookController extends AbstractController {
      * 保存
      */
     @PostMapping("/save")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     @RequiresPermissions("book:save")
     public Result save(@RequestBody BookDTO book) {
         ValidatorUtils.validateEntity(book);
@@ -79,7 +79,7 @@ public class BookController extends AbstractController {
      * 修改
      */
     @PutMapping("/update")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     @RequiresPermissions("book:update")
     public Result update(@RequestBody BookDTO book) {
         ValidatorUtils.validateEntity(book);
@@ -94,7 +94,7 @@ public class BookController extends AbstractController {
      * @return
      */
     @PutMapping("/update/status")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     @RequiresPermissions("book:update")
     public Result updateStatus(@RequestBody Book readBook) {
         bookService.updateById(readBook);
@@ -105,7 +105,7 @@ public class BookController extends AbstractController {
      * 删除
      */
     @DeleteMapping("/delete")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     @RequiresPermissions("book:delete")
     public Result delete(@RequestBody Integer[] ids) {
         bookService.deleteBatch(ids);

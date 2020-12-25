@@ -39,7 +39,7 @@ public class BookSenseController extends AbstractController {
      */
     @PostMapping("/save")
     @RequiresPermissions("book:save")
-    @CacheEvict(allEntries = true)
+//    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result save(@RequestBody BookSense bookSense) {
         ValidatorUtils.validateEntity(bookSense);
         bookSenseService.save(bookSense);
@@ -52,7 +52,7 @@ public class BookSenseController extends AbstractController {
      */
     @PutMapping("/update")
     @RequiresPermissions("book:update")
-    @CacheEvict(allEntries = true)
+    //    @CacheEvict(allEntries = true)(allEntries = true)
     public Result update(@RequestBody BookSense bookSense) {
         ValidatorUtils.validateEntity(bookSense);
         bookSenseService.updateById(bookSense);

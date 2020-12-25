@@ -21,7 +21,7 @@ import static com.google.common.collect.Lists.newArrayList;
 /**
  * SwaggerConfig
  *
- * @author bobbi
+ * @author turbo
  * @date 2018/10/07 10:47
  * @description Swagger2配置
  */
@@ -50,8 +50,8 @@ public class SwaggerConfig implements WebMvcConfigurer{
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("dbBlog")
-            .description("dbBlog的接口文档")
+            .title("turbo-blog")
+            .description("turbo-blog的接口文档")
             .termsOfServiceUrl("http://www.dbBlog.com")
             .build();
     }

@@ -14,7 +14,7 @@ import java.io.Serializable;
  * 文章标签多对多维护表
  * </p>
  *
- * @author bobbi
+ * @author turbo
  * @since 2019-01-07
  */
 @Data

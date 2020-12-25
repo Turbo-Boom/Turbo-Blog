@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * ArticleVo
  *
- * @author bobbi
+ * @author turbo
  * @date 2019/01/09 16:51
  * @email 571002217@qq.com
  * @description 文章列表VO

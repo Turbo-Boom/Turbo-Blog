@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * Query
  *
- * @author bobbi
+ * @author turbo
  * @date 2018/10/25 11:48
  * @email 571002217@qq.com
  * @description 查询参数

@@ -12,7 +12,7 @@ export function getUUID () {
 }
 /**
  * @Description: 是否有权限
- * @author Bobbi
+ * @author Turbo
  * @date 18-9-28
 */
 export function isAuth (key) {
@@ -49,7 +49,7 @@ export function treeDataTranslate (data, id = 'id', pid = 'parentId') {
 
 /**
  * @Description: 清除登录信息
- * @author Bobbi
+ * @author Turbo
  * @date 18-9-28
 */
 export function clearLoginInfo () {

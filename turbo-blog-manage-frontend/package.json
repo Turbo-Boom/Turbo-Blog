@@ -1,5 +1,5 @@
 {
-  "name": "dbblog-manage-frontend",
+  "name": "turbo-blog-manage-frontend",
   "version": "1.0.0",
   "description": "一个前后端分离的博客系统，这是后台管理的前端页面，基于Vue",
   "author": "llldddbbb <571002217@qq.com>",
@@ -10,7 +10,7 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
+    "lint": "eslint --ext .js,.vue src test/unit test/e2e/.controller.ArticleController.saveArticlespecs",
     "build": "node build/build.js"
   },
   "dependencies": {

@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 阅读日志 Mapper 接口
  * </p>
  *
- * @author bobbi
+ * @author turbo
  * @since 2019-02-15
  */
 @Mapper

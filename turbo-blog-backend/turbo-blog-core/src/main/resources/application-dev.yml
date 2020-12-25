@@ -3,7 +3,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
     druid:
-      url: jdbc:mysql://localhost:3306/dbblog?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT
+      url: jdbc:mysql://localhost:3306/dbblog?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT&allowPublicKeyRetrieval=true
       username: root
       password: sbiavjdskf
       initial-size: 10
@@ -63,9 +63,8 @@ oss:
     domain: http://valprofiles.cindata.cn
     prefix: valpro
     accessKey: RJXgiiyNZa7xuGNzg0zQbrHWHVdEIM-5yw3XQc0A
-#    secretKey: ENC(UXM3TEuaIuLrPdKuDASHoZExQyOrgGl7PqV/iB0EbHOFhnUSF3bMol8D2qh+QlthccS5QD0fHbM=)
     secretKey: bR7o3OWzAozbe8mcgjsZfqR4cKP46VImscPbs76b
-    bucketName: test
+    bucketName: valpro
 
 jasypt:
   encryptor:

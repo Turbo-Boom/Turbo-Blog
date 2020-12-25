@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * CorsConfig
  *
- * @author bobbi
+ * @author turbo
  * @date 2018/10/20 17:12
  * @email 571002217@qq.com
  * @description 跨域配置

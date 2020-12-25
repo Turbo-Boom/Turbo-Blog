@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * ReadBookVo
  *
- * @author bobbi
+ * @author turbo
  * @date 2019/01/29 14:17
  * @email 571002217@qq.com
  * @description

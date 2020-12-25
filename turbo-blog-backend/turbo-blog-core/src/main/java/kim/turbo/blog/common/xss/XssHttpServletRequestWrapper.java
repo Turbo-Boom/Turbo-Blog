@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * XSS过滤处理
  *
- * @author bobbi
+ * @author turbo
  * @date 2018/10/07 16:39
  * @email 571002217@qq.com
  * @description XSS过滤处理

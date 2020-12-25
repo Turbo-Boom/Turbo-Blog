@@ -10,7 +10,7 @@ import java.io.Serializable;
  * 系统用户Token
  * </p>
  *
- * @author bobbi
+ * @author turbo
  * @since 2018-10-19
  */
 @Data

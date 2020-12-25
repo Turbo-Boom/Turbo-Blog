@@ -8,6 +8,8 @@ import kim.turbo.blog.common.base.BaseEntity;
 import kim.turbo.blog.common.validator.group.AddGroup;
 import kim.turbo.blog.common.validator.group.UpdateGroup;
 import lombok.Data;
+import org.springframework.data.elasticsearch.annotations.Document;
+
 
 
 import javax.validation.constraints.NotBlank;
@@ -18,12 +20,12 @@ import java.io.Serializable;
  * 文章
  * </p>
  *
- * @author bobbi
+ * @author turbo
  * @since 2018-11-07
  */
 @Data
 @ApiModel(value="BlogArticle对象", description="文章")
-//@Document(indexName = "dbblog",type = "article")
+@Document(indexName = "dbblog")
 public class Article extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;

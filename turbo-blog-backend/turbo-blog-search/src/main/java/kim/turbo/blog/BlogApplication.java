@@ -2,6 +2,7 @@ package kim.turbo.blog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
 /**
  * 启动类
@@ -12,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version v1.0.0
  */
 @SpringBootApplication
+@EnableCaching
 public class BlogApplication {
 
 

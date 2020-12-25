@@ -58,7 +58,7 @@ public class ArticleController extends AbstractController {
 
     @PostMapping("/save")
     @RequiresPermissions("article:save")
-    @CacheEvict(allEntries = true)
+    @CacheEvict(allEntries = true,cacheNames = "saveArticle")
     @RefreshEsMqSender(sender = "dbblog-manage-saveArticle")
     public Result saveArticle(@RequestBody ArticleDTO article) {
         ValidatorUtils.validateEntity(article);
@@ -78,9 +78,10 @@ public class ArticleController extends AbstractController {
 
     @PutMapping("/update/status")
     @RequiresPermissions("article:update")
-    @CacheEvict(allEntries = true)
+    @CacheEvict(allEntries = true, cacheNames = "updateStatus")
     @RefreshEsMqSender(sender = "dbblog-manage-updateStatus")
     public Result updateStatus(@RequestBody Article article) {
+
         articleService.updateById(article);
         return Result.ok();
     }

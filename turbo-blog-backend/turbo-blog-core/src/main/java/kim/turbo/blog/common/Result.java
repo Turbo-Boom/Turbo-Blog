@@ -7,7 +7,7 @@ import java.util.HashMap;
 /**
  * Result
  *
- * @author bobbi
+ * @author turbo
  * @date 2018/10/07 13:28
  * @email 571002217@qq.com
  * @description 通用返回类

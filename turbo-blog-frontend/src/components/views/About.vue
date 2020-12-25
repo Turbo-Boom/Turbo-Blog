@@ -1,7 +1,7 @@
 <template>
   <div class="about">
-    <img class="background" src="../../assets/background.jpg" alt="">
-    <img class="avatar" src="../../assets/avatar.jpg" alt="">
+    <img class="background" src="../../assets/background1.jpeg" alt="">
+    <img class="avatar" src="../../assets/avatar2.jpg" alt="">
     <p class="name">Turbo</p>
     <p class="desc">三里清风三里路，步步清风步步你。</p>
     <ul class="social">

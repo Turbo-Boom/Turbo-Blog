@@ -3,7 +3,7 @@ package kim.turbo.blog.common.constants;
 /**
  * RedisKeyConstants
  *
- * @author bobbi
+ * @author turbo
  * @date 2018/10/20 13:44
  * @email 571002217@qq.com
  * @description redis baseKey管理常量

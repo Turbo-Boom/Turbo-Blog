@@ -17,7 +17,7 @@ import java.io.Serializable;
  * 系统参数
  * </p>
  *
- * @author bobbi
+ * @author turbo
  * @since 2018-12-28
  */
 @Data

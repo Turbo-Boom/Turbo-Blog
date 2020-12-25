@@ -3,7 +3,7 @@ package kim.turbo.blog.common.constants;
 /**
  * RabbitMqConstants
  *
- * @author bobbi
+ * @author turbo
  * @date 2019/03/16 22:12
  * @email 571002217@qq.com
  * @description

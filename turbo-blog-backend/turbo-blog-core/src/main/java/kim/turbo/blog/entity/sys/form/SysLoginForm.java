@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * SysLoginForm
  *
- * @author bobbi
+ * @author turbo
  * @date 2018/10/20 14:51
  * @email 571002217@qq.com
  * @description 登录表单对象
